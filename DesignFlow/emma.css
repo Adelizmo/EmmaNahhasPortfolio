@@ -12,6 +12,7 @@
     justify-content: start;
 }
 #Contained {
+    background: none !important;
     padding-bottom: 10px;
     position: sticky;
     z-index: 10;
