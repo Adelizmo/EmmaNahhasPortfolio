@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Nahhas</title>
+    <link rel="stylesheet" href="emma.css">
+    <script src="https://kit.fontawesome.com/ea57de8336.js" crossorigin="anonymous"></script>
+    <!-- Meta Data -->
+    <meta name="description" content="An Art Portfolio of Emma Nahhas showcasing photography at its finest and while taking you on a soothing ride to nature and tranquility ">
+    <meta name="keywords" content="FEC, Finance, Economics, Club">
+    <meta property="og:title" content="Finance & Economics Club | At PSU">
+    <link rel="icon" type="image/x-icon" href="/DesignFlow/content/Web Image(200 x 200 px).png">
+    <!-- Default Styling -->
+    <style>
+        * {
+            margin: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            font-family: mid;
+        }
+        :root {
+            --b1: rgb(252, 240, 213);
+            --b2: rgb(216, 195, 165);
+            --b3: rgb(181, 170, 153);
+            --b3_rgb: 181, 170, 153;
+            --b4: rgb(79, 69, 55);
+            --b4_rgb: 79, 69, 55;
+            --b5: rgb(60, 46, 22);
+            --b6: 	rgb(75, 133, 107);
+            --b7: rgb(27, 61, 47);
+            --b8: rgb(170, 143, 24);
+
+            --ex1:rgb(198, 187, 161);
+            --ex2:rgb(146, 136, 112);
+            --ex3: rgb(98, 89, 66);
+            --ex4: rgb(53, 46, 25);
+
+        }
+        .hidden {
+            display: none !important;
+        }
+        body {
+            background: var(--b1);
+        }
+        #WholePage {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: relative;
+        }
+        #WholePage * {
+            flex-shrink: 0;
+        }
+        ::-webkit-scrollbar {display: none;}
+        #WholePage {
+            font-size: 50px;
+            font-family: large;
+        }
+        @font-face {
+            font-family: large;
+            src: url(/DesignFlow/content/ClashDisplay-Variable.ttf);
+        }
+        @font-face {
+            font-family: mid;
+            src: url(/DesignFlow/content/Roboto-VariableFont_wdth\,wght.ttf);
+        }
+        @font-face {
+            font-family: small;
+            src: url(/DesignFlow/content/BebasNeue-Regular.ttf);
+        }
+        
+        .Logo {
+            flex-shrink: 0;
+            width: 250px;
+            aspect-ratio: 2/1;
+        }
+
+        .DesignBox {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .DesignName {
+            color: var(--b5);
+            padding-bottom: 12px;
+            width: 100%;
+            height: 50px;
+            font-family: large;
+            font-weight: 400;
+            letter-spacing: -1px;
+            border-bottom: 1px solid rgba(var(--b3_rgb), 0.7);
+        }
+        .DesignName:is(.no-border) {
+            border: 0;
+        }
+        .DesignContent {
+            width: 100%;
+            height: fit-content;
+            min-height: 100px;
+        }
+        .DesignContent:is(.gap) {
+            margin-top: 20px;
+        }
+        .DesignContent:is(.horizontal) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .DesignContent:is(.vertical) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .DesignContent:is(.border) {
+            width: calc(100% - 2px);
+            border: 1px solid rgba(var(--b3_rgb), 0.5);
+        }
+        .DesignHead {
+            position: relative;
+            box-sizing: border-box;
+            padding-inline: 20px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .DesignHead::after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            background: var(--b3);
+            content: '';
+            top: calc(50% - 1px);
+        }
+        .DesignHead p {
+            padding-inline: 10px;
+            color: rgba(var(--b4_rgb), 0.7);
+            width: fit-content;
+            background: var(--b1);
+            position: relative;
+            z-index: 2;
+            font-size: 27px;
+            font-family: large;
+        }
+
+        #SwitchBTN {
+            box-sizing: border-box;
+            padding-inline: 20px;
+            cursor: pointer;
+            width: 100%;
+            height: 50px;
+            border-top: 2px solid rgba(var(--b3_rgb), 0.5);
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            color: var(--b5);
+            transition: 0.3s all ease-in-out;
+        }
+        #SwitchBTN:hover {
+            padding-inline: 25px;
+        }
+        #SwitchBTN p {
+            position: relative;
+            font-weight: 400;
+            font-family: mid;
+        }
+        #SwitchBTN p::after {
+            position: absolute;
+            content: "";
+            background: var(--b5);
+            width: 0;
+            height: 3px;
+            bottom: -4px;
+            left: 0;
+            transition: 0.3s all ease-in-out;
+        }
+        #SwitchBTN:hover p::after {
+            width: 100%;
+        }
+
+        #FixedStyledElements {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            left: 100%;
+            pointer-events: all;
+            position: fixed;
+            z-index: 105;
+            width: 100vw;
+            height: calc(100vh);
+            background: var(--b1);
+            padding: 50px;
+            padding-block: 0;
+            box-sizing: border-box;
+            transition: 0.5s left ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        #FixedStyledElements * {
+            flex-shrink: 0;
+        }
+        #FixedStyledElements:is(.Open) {
+            left: 0;
+        }
+        #FixedStyledElements::after {
+            position: relative;
+            flex-shrink: 0;
+            content: '';
+            width: 100%;
+            height: 100px;
+        }
+        #FixedPage_Head {
+            z-index: 100;
+            background: var(--b1);
+            position: sticky;
+            top: 0px;
+            padding-inline: 20px;
+            cursor: pointer;
+            width: calc(100% - 40px);
+            height: 50px;
+            padding-top: 60px;
+            border-bottom: 1px solid rgba(var(--b3_rgb), 0.5);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            color: var(--b5);
+            transition: 0.3s all ease-in-out;
+        }
+        #FixedPage_Head:hover {
+            width: calc(100% - 50px);
+            padding-inline: 25px;
+        }
+        #FixedPage_Head p {
+            position: relative;
+            font-weight: 400;
+            font-family: mid;
+        }
+        #FixedPage_Head p::after {
+            position: absolute;
+            content: "";
+            background: var(--b5);
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            transition: 0.3s all ease-in-out;
+        }
+        #FixedPage_Head:hover p::after {
+            width: 100%;
+        }
+        .Special {
+            position: relative;
+            box-sizing: border-box;
+            padding-inline: 20px;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .Special::after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            background: var(--b4);
+            content: '';
+            top: calc(50% - 1px);
+        }
+        .Special p {
+            padding-inline: 10px;
+            color: var(--b4);
+            width: fit-content;
+            background: var(--b1);
+            position: relative;
+            z-index: 2;
+            font-size: 30px;
+            font-family: large;
+        }
+    </style>
+</head>
+<body>
+    <div id="WholePage">
+        <div id="LandingContainer">
+            <div id="Contained">
+                <div id="ArtLogo">
+                    <img class="Logo" src="/DesignFlow/content/Emma Nahhas.png"> 
+                </div>
+                <p id="DesignFlow_Descr">An Art Portfolio Website</p>
+            </div>
+            <p id="DesignFlow_Website">Design Flow</p>
+        </div>
+        <div id="DesignContents">
+            <!-- Fonts -->
+            <div class="DesignBox">
+                <div class="DesignName">Fonts.</div>
+                <div class="DesignContent gap horizontal">
+                    <div class="FontHolder">
+                        <div class="FontMain" style="font-family: large;">Aa</div>
+                        <div class="FontName" style="font-family: large;">Clash Display</div>
+                    </div>
+                    <div class="FontHolder">
+                        <div class="FontMain" style="font-family: mid;">Aa</div>
+                        <div class="FontName" style="font-family: mid;">Roboto</div>
+                    </div>
+                    <div class="FontHolder">
+                        <div class="FontMain" style="font-family: small;">Aa</div>
+                        <div class="FontName" style="font-family: small;">Bebas Neue</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="DesignBox">
+                <div class="DesignName">Logos.</div>
+                <div class="DesignContent gap vertical">
+                    <div class="LogoDisplay">
+                        <p class="Logo_Name">Regular <span>(500x250)</span></p>
+                        <div class="Logo_Frame" style="top: 10px;">
+                            <img width="300" src="/DesignFlow/content/Emma Nahhas.png">
+                        </div>
+                    </div>
+                    <div class="LogoDisplay">
+                        <p class="Logo_Name">Small <span>(200x200)</span></p>
+                        <div class="Logo_Frame" style="top: 10px;">
+                            <img width="100" src="/DesignFlow/content/Emma Nahhas (200 x 200 px).png">
+                        </div>
+                    </div>
+                    <div class="LogoDisplay">
+                        <p class="Logo_Name">Very Small <span>(200x200)</span></p>
+                        <div class="Logo_Frame" style="top: 10px;">
+                            <img width="50" src="/DesignFlow/content/Very small(200 x 200 px).png">
+                        </div>
+                    </div>
+                    <div class="LogoDisplay">
+                        <p class="Logo_Name">Web Tab Image <span>(200x200)</span></p>
+                        <div class="Logo_Frame" style="top: 0px;">
+                            <img width="50" style="position: relative; top: 7px; background: rgba(50, 50, 50); border-radius: 5px;" src="/DesignFlow/content/Web Image(200 x 200 px).png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="DesignBox" id="TEL">
+                <div class="DesignName">Color Palette.</div>
+                <div class="DesignContent gap" id="CustomLayoutColors">
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(252, 240, 213)</div>
+                        <div class="ColorHole" style="background: var(--b1)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(216, 195, 165)</div>
+                        <div class="ColorHole" style="background: var(--b2)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(181, 170, 153)</div>
+                        <div class="ColorHole" style="background: var(--b3)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(79, 69, 55)</div>
+                        <div class="ColorHole" style="background: var(--b4)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(60, 46, 22)</div>
+                        <div class="ColorHole" style="background: var(--b5)"></div>
+                    </div>
+
+                    <div class="Special"><p>Special Colors</p></div>
+
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(75, 133, 107)</div>
+                        <div class="ColorHole" style="background: var(--b6)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(27, 61, 47)</div>
+                        <div class="ColorHole" style="background: var(--b7)"></div>
+                    </div>
+                    <div class="ColorBox">
+                        <div class="ColorName">rgb(170, 143, 24)</div>
+                        <div class="ColorHole" style="background: var(--b8)"></div>
+                    </div>
+                </div>
+
+                <!-- 
+                            --b1: rgb(252, 240, 213);
+                            --b2: rgb(216, 195, 165);
+                            --b3: rgb(181, 170, 153);
+                            --b3_rgb: 181, 170, 153;
+                            --b4: rgb(79, 69, 55);
+                            --b4_rgb: 79, 69, 55;
+                            --b5: rgb(60, 46, 22);
+                            --b6: rgb(75, 133, 107);
+                            --b7: rgb(27, 61, 47);
+                            --b8: rgb(170, 143, 24);
+
+                            --ex1:rgb(198, 187, 161);
+                            --ex2:rgb(146, 136, 112);
+                            --ex3: rgb(98, 89, 66);
+                            --ex4: rgb(53, 46, 25); 
+                -->
+            </div>
+            <div id="SwitchBTN" onclick="Toggle_Styling()">
+                <p>Element Styling</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <div id="FixedStyledElements" class="Open">
+            <div id="FixedPage_Head" onclick="Toggle_Styling()"><i class='fa-solid fa-arrow-left'></i><p>Back</p></div>
+
+            <div class="DesignBox" style="margin-top: 50px;">
+                <div class="DesignName" style="font-size: 40px; height: 35px;">Navigation Bar Type1</div>
+                <div class="DesignContent gap vertical">
+                    <div id="NavBarContainer1">
+                        <div class="NavBarLinks1">
+                            <div class="NavBarLink1">About Me</div>
+                            <div class="NavBarLink1">Collection</div>
+                        </div>
+                        <div id="NavBarLogo1">
+                            <img src="/DesignFlow/content/Emma Nahhas.png">
+                        </div>
+                        <div class="NavBarLinks1">
+                            <div class="NavBarLink1">Collages</div>
+                            <div class="NavBarLink1">Socials</div>
+                        </div>
+                    </div>
+                    <div class="DesignHead"><p>Phone Friendly Design</p></div>
+                    <div id="NavBarContainer1_Phone">
+                        <div class="NavBarLinks1_Phone">
+                            <div class="NavBarLink1_Phone">About Me</div>
+                            <div class="NavBarLink1_Phone">Collection</div>
+                        </div>
+                        <div id="NavBarLogo1_Phone">
+                            <img src="/DesignFlow/content/Emma Nahhas (200 x 200 px).png">
+                        </div>
+                        <div class="NavBarLinks1_Phone">
+                            <div class="NavBarLink1_Phone">Collages</div>
+                            <div class="NavBarLink1_Phone">Socials</div>
+                        </div>
+                    </div>
+                    <div id="NavBarContainer1_Phone1" style="margin-top: 20px;">
+
+                        <div id="NavBarLogo1_Phone1">
+                            <img src="/DesignFlow/content/Very small(200 x 200 px).png">
+                        </div>
+                        <div id="MenuBar1">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="DesignBox" style="margin-top: 100px;">
+                <div class="DesignName" style="font-size: 40px; height: 35px;">Navigation Bar Type2</div>
+                <div class="DesignContent gap vertical">
+                    <div id="NavBarContainer1">
+                        <div id="NavBarLogo1" style="position: relative; top: 1px;">
+                            <img src="/DesignFlow/content/Emma Nahhas.png">
+                        </div>
+                        <div class="NavBarLinks1">
+                            <div class="NavBarLink1">About Me</div>
+                            <div class="NavBarLink1">Collection</div>
+                            <div class="NavBarLink1">Collages</div>
+                            <div class="NavBarLink1">Socials</div>
+                        </div>
+                    </div>
+                    <div class="DesignHead"><p>Phone Friendly Design</p></div>
+                    <div id="NavBarContainer1_Phone">
+                        <div id="NavBarLogo1_Phone" style="position: relative; left: -20px">
+                            <img src="/DesignFlow/content/Emma Nahhas (200 x 200 px).png">
+                        </div>
+                        <div class="NavBarLinks1_Phone">
+                            <div class="NavBarLink1_Phone">About Me</div>
+                            <div class="NavBarLink1_Phone">Collection</div>
+                            <div class="NavBarLink1_Phone">Collages</div>
+                            <div class="NavBarLink1_Phone">Socials</div>
+                        </div>
+                    </div>
+                    <div id="NavBarContainer1_Phone1" style="margin-top: 20px;">
+
+                        <div id="NavBarLogo1_Phone1">
+                            <img src="/DesignFlow/content/Very small(200 x 200 px).png">
+                        </div>
+                        <div id="MenuBar1">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="DesignBox" style="margin-top: 100px;">
+                <div class="DesignName" style="font-size: 40px; height: 35px;">Footer</div>
+                <div class="DesignContent gap vertical">
+                    <div id="Footer1">
+                        <div id="FooterText">
+                            <p>Photographic Art Portfolio</p>
+                        </div>
+                        <div id="LeftSection">
+                            <div id="FooterLogo">
+                                <img src="/DesignFlow/content/Emma Nahhas.png">
+                            </div>
+                            <div id="FooterLinks">
+                                <div id="FooterLinkList">
+                                    <div class="FooterLink">About Me</div>
+                                    <div class="FooterLink">Collection</div>
+                                    <div class="FooterLink">Collages</div>
+                                    <div class="FooterLink">Socials</div>
+                                </div>
+                                <div id="Orgins">London, United Kingdom</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="DesignHead"><p>Phone Friendly Design</p></div>
+
+                    <div id="Footer2">
+                        <div id="FooterText2">
+                            <p>Artistic</p>
+                        </div>
+                        <div id="LeftSection2">
+                            <div id="FooterLogo2">
+                                <img src="/DesignFlow/content/Emma Nahhas.png">
+                            </div>
+                            <div id="FooterLinks2">
+                                <div id="FooterLinkList2">
+                                    <div class="FooterLink2">About Me</div>
+                                    <div class="FooterLink2">Collection</div>
+                                    <div class="FooterLink2">Collages</div>
+                                    <div class="FooterLink2">Socials</div>
+                                </div>
+                                <div id="Orgins2">London, United Kingdom</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="emma.js"></script>
+</body>
+</html>

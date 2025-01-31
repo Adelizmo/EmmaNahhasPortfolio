@@ -1,0 +1,525 @@
+#LandingContainer {
+    position: relative;
+    background: var(--b2);
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 65px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+#Contained {
+    background: var(--b2);
+    padding-bottom: 10px;
+    position: sticky;
+    z-index: 10;
+    top: 30px;
+    width: 100%;
+    height: 90px;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+#DesignFlow_Descr {
+    text-wrap: nowrap;
+    color: var(--b5);
+    font-size: 42px;
+    font-weight: 400;
+    font-family: large;
+}
+#ArtLogo {
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#DesignFlow_Website {
+    max-width: 1400px;
+    height: 58px;
+    color: var(--b1);
+    font-size: 100px;
+    padding-inline: 2px;
+    z-index: 1;
+    position: absolute;
+    right: calc(100vw/1400px);
+    bottom: 0;
+    box-sizing: border-box;
+    padding-right: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    font-family: small;
+
+    animation: opacityMove linear;
+    animation-timeline: view();
+}
+@keyframes opacityMove {
+    60% {
+        bottom: 0;
+        opacity: 1;
+    }
+    70% {
+        bottom: -100px;
+        opacity: 0.7;
+    }
+    100% {
+        bottom: -100px;
+        opacity: 0.7;
+    }
+}
+
+
+#DesignContents {
+    max-width: 1300px;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+}
+
+.FontHolder {
+    flex-grow: 1;
+    width: 33.33%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(var(--b3_rgb), 0.5);
+}
+.FontHolder:last-child {
+    border: 0;
+}
+.FontMain {
+    color: var(--b5);
+    font-size: 75px;
+}
+.FontName {
+    color: var(--b4);
+    font-size: 35px;
+    text-align: center;
+}
+
+.LogoDisplay {
+    overflow: hidden;
+    max-height: 100px;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LogoDisplay::before {
+    content: '';
+    width: 100%;
+    height: 1px; 
+    position: absolute;
+    top: calc(50% + 1px);
+    box-sizing: border-box;
+    border-bottom: 2px dashed rgba(var(--b3_rgb), 0.5);
+    left: 0;
+}
+.Logo_Name {
+    color: var(--b4);
+    padding-inline: 20px;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    background: var(--b1);
+}
+.Logo_Name span {
+    font-size: 14px;
+    color: rgba(var(--b4_rgb), 0.7)
+}
+.Logo_Frame {
+    padding-inline: 10px;
+    position: relative;
+    z-index: 1;
+    background: var(--b1);
+}
+
+
+#CustomLayoutColors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.ColorBox {
+    min-width: 200px;
+    border-radius: 3px;
+    width: calc(33.33% - 7.25px);
+    box-sizing: border-box;
+    max-width: 300px;
+    border: 1px solid var(--b5);
+    flex-grow: 1;
+    aspect-ratio: 1/1.05;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.ColorName {
+    color: var(--b4);
+    border-bottom: 1px solid var(--b5);
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    font-size: 17px;
+}
+.ColorHole {
+    width: 100%;
+    flex-grow: 1;
+}
+
+
+/* Fixed Elements */
+/* NavBar1 */
+#NavBarContainer1 {
+    background: var(--b2);
+    box-sizing: border-box;
+    padding-inline: 30px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.NavBarLinks1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+}
+.NavBarLink1 {
+    cursor: pointer;
+    color: var(--b5);
+    font-family: large;
+    font-weight: 450;
+    position: relative;
+}
+.NavBarLink1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--b5);
+    transition: 0.3s all ease-in-out;
+}
+.NavBarLink1:hover::after {
+    width: 100%;
+}
+#NavBarLogo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    aspect-ratio: 2/1;
+}
+#NavBarLogo1 img {
+    width: 100%;
+}
+
+#NavBarContainer1_Phone {
+    max-width: 600px;
+    background: var(--b2);
+    box-sizing: border-box;
+    padding-inline: 30px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.NavBarLinks1_Phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+}
+.NavBarLink1_Phone {
+    position: relative;
+    cursor: pointer;
+    color: var(--b5);
+    font-family: large;
+    font-weight: 450;
+}
+.NavBarLink1_Phone::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--b5);
+    transition: 0.3s all ease-in-out;
+}
+.NavBarLink1_Phone:hover::after {
+    width: 100%;
+}
+#NavBarLogo1_Phone {
+    position: relative;
+    top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    aspect-ratio: 2/1;
+}
+#NavBarLogo1_Phone img {
+    width: 100%;
+}
+
+#NavBarContainer1_Phone1 {
+    max-width: 400px;
+    background: var(--b2);
+    box-sizing: border-box;
+    padding-inline: 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.NavBarLinks1_Phone1 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+}
+.NavBarLink1_Phone1 {
+    cursor: pointer;
+    color: var(--b5);
+    font-family: large;
+    font-weight: 450;
+}
+#NavBarLogo1_Phone1 {
+    position: relative;
+    top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 2/1;
+}
+#NavBarLogo1_Phone1 img {
+    width: 100%;
+}
+#MenuBar1 {
+    cursor: pointer;
+    margin-right: 10px;
+    width: fit-content;
+    aspect-ratio: 1/1;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--b5);
+}
+
+/* Footer */
+#Footer1 {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: var(--b2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding-top: 2px;
+    padding-inline: 15px;
+}
+#FooterText {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#FooterText p {
+    font-size: 70px;
+    color: var(--b1);
+    font-family: small;
+}
+#LeftSection {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+#FooterLogo {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#FooterLogo img {
+    width: 100%;
+}
+#FooterLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+#FooterLinkList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.FooterLink {
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    color: var(--b5);
+    font-family: large;
+    font-weight: 450;
+}
+.FooterLink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--b5);
+    transition: 0.3s all ease-in-out;
+}
+.FooterLink:hover::after {
+    width: 100%;
+}
+#Orgins {
+    font-family: large;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--b1);
+}
+
+/* Footer Phone */
+#Footer2 {
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: var(--b2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding-top: 2px;
+    padding-inline: 15px;
+}
+#FooterText2 {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 10px);
+    left: 170px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.11;
+}
+#FooterText2 p {
+    font-size: 370px;
+    color: var(--b1);
+    font-family: small;
+}
+#LeftSection2 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#FooterLogo2 {
+    margin-bottom: 50px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#FooterLogo2 img {
+    width: 100%;
+}
+#FooterLinks2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+#FooterLinkList2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.FooterLink2 {
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    color: var(--b5);
+    font-family: large;
+    font-weight: 450;
+}
+.FooterLink2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--b5);
+    transition: 0.3s all ease-in-out;
+}
+.FooterLink2:hover::after {
+    width: 100%;
+}
+#Orgins2 {
+    font-family: large;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--b1);
+}
